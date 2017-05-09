@@ -74,9 +74,8 @@ cooc <- function(j, N, N1, N2){
   a <- comb(N1, j)
   b <- comb( (N - N1), (N2 - j))
   d <- comb(N, N2)
-  e <- sum(j + N)#git test
   return( (a * b) / d)
 }
 
-##
+
 
