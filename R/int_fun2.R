@@ -18,8 +18,8 @@ adj <- function(net, pot_net = NULL){
   adj_in <- list()
   adj_out <- list()
   for (i in vall2){
-    n2 <- dplyr::filter(net, "X2 == i")
-    n1 <- dplyr::filter(net, "X1 == i")
+    n2 <- dplyr::filter(net, net$X2 == i)
+    n1 <- dplyr::filter(net, net$X1 == i)
     if (length(n2$X2) != 0){
       adj_in[[i]] <- sort(unique(n2$X1))
     } else {
@@ -40,8 +40,8 @@ adj <- function(net, pot_net = NULL){
   pot_in <- list()
   pot_out <- list()
   for (i in vall2){
-    Pn2 <- dplyr::filter(pot_net, X2 == i)
-    Pn1 <- dplyr::filter(pot_net, X1 == i)
+    Pn2 <- dplyr::filter(pot_net, pot_net$X2 == i)
+    Pn1 <- dplyr::filter(pot_net, pot_net$X1 == i)
     if (length(Pn2$X2) != 0){
       pot_in[[i]] <- sort(unique(Pn2$X1))
     }  else {
