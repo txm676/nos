@@ -2,7 +2,7 @@
 % Please edit documentation in R/dir.R
 \name{NOSM_dir}
 \alias{NOSM_dir}
-\title{Compute N_bar using a directed network without a user provided network
+\title{Compute NOS using a directed network without a user provided network
 of potential interactions}
 \usage{
 NOSM_dir(net, perc = 1, sl = 1)
@@ -16,7 +16,7 @@ characters. For each row (i.e. node pair), the value in the first column is
 column.}
 
 \item{perc}{(default to 1) - the fraction of node pair comparisons to be
-performed to compute N_bar. We recommend performing all possible pair
+performed to compute NOS. We recommend performing all possible pair
 comparisons (perc = 1). However, for exploratory analyses on large sets of
 networks (or for very large networks), the possibility of using a lower
 fraction of pair comparisons is a useful option.}
@@ -35,7 +35,7 @@ A list (two elements) of class 'NOSM' with a 'Type' attribute 'Dir'.
   statistics.
 }
 \description{
-Computation of N_bar (NOS) using a directed network (e.g. food
+Computation of NOS using a directed network (e.g. food
   web) and without a user provided network of potential interactions. In a
   directed, unimode network, all nodes having at least an in-coming link will
   be considered as potential partners for nodes having at least an out-going

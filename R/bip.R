@@ -1,9 +1,9 @@
-#' Compute N_bar using a bipartite network
+#' Compute NOS using a bipartite network
 #'
-#' @description Computation of N_bar (NOS) using a bipartite network (e.g.
+#' @description Computation of NOS using a bipartite network (e.g.
 #'   plant-pollinator network), where nodes can be formally categorized into two
 #'   distinct categories (e.g. plant-pollinators). All nodes in one category
-#'   will be considered as potential partners for the  nodes in the other
+#'   will be considered as potential partners for the nodes in the other
 #'   category (and vice-versa).
 #' @usage NOSM_bip(net, perc = 1, sl = 1)
 #' @param net A network, in the form of an edge list. This should be a matrix or
@@ -13,7 +13,7 @@
 #'   'consumed' (or pollinated, parasitized etc) by the value in the second
 #'   column.
 #' @param perc (default to 1) - the fraction of node pair comparisons to be
-#'   performed to compute N_bar. We recommend performing all possible pair
+#'   performed to compute NOS. We recommend performing all possible pair
 #'   comparisons (perc = 1). However, for exploratory analyses on large sets of
 #'   networks (or for very large networks), the possibility of using a lower
 #'   fraction of pair comparisons is a useful option.
@@ -27,7 +27,6 @@
 #'
 #'   The \code{\link{summary.NOSM}} methods provides more useful summary
 #'   statistics.
-#'
 #' @examples
 #' data(boreal)
 #' x <- NOSM_bip(boreal, perc = 1, sl = 1)

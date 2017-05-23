@@ -6,31 +6,28 @@
 \title{nos: A package for calculating node overlap and segregation in ecological
   networks}
 \description{
-A package to calculate the N_bar metric and associated NOS
- framework in Strona et al. (2017). The functions provided in the package
- enable assessment of structural patterns in a variety of network types
- ranging from complete node segregation to perfect nestedness, in addition to
- providing a measure of network modularity.
+A package to calculate NOS (node overlap and segregation) and
+  the associated metrics described in Strona and Veech (2015) and Strona et
+  al. (2017). The functions provided in the package enable assessment of
+  structural patterns ranging from complete node segregation to perfect
+  nestedness in a variety of network types. In addition, they provide a
+  measure of network modularity.
 }
 \details{
-There are five main S3 generics that the user can use depending on
- whether a directed, bipartite or undirected network is required, and whether
- a network of potential interactions (pot_net) is provided by the user. These
- five functions are:
- 1) NOSM_dir - for directed unimode networks (e.g. food
- webs) when pot_net is not provided
- 2) NOSM_undir - for undirected networks
- (e.g. social networks) when pot_net is not provided
- 3) NOSM_bip - for
- bipartite networks (e.g. plant-pollinator networks)
- 4) NOSM_pot_dir - for
- directed unimode networks (e.g. food webs) when pot_net is provided
- 5) NOSM_undir - for undirected networks (e.g. social networks) when pot_net
- is provided
+There are five main S3 generics that the user can choose depending
+  on whether a directed, bipartite or undirected network is provided as
+  input, and whether a network of potential interactions (pot_net) is
+  available from the user. These five functions are: 1) NOSM_dir - for
+  directed unimode networks (e.g. food webs) when pot_net is not provided, 2)
+  NOSM_undir - for undirected networks (e.g. co-occurrence networks) when
+  pot_net is not provided, 3) NOSM_bip - for bipartite networks (e.g.
+  plant-pollinator networks), 4) NOSM_pot_dir - for directed unimode networks
+  (e.g. food webs) when pot_net is provided, and 5) NOSM_pot_undir - for
+  undirected networks (e.g. co-occurrence networks) when pot_net is provided.
 
- Each of these five main functions produces an output of class 'NOSM'. An
- S3 method (summary.NOSM) provides the summary statistics of interest (e.g.
- NOS/N_bar, Mod/network modularity, z and p).
+ Each of these five main functions produces an output with class 'NOSM'. An
+ S3 method (summary.NOSM) provides the summary statistics of interest (e.g..
+ NOS, Mod/network modularity, effect size Z, and p-value).
 
  If a network of potential interactions is not provided, the computation will
  be made according to the following criteria: in an undirected network, all

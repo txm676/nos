@@ -4,10 +4,12 @@
 \alias{summary.NOSM}
 \title{Summarising the results of the five main NOSM functions}
 \usage{
-summary(x, y = 3)
+\method{summary}{NOSM}(object, ..., y = 3)
 }
 \arguments{
-\item{x}{An object of class 'NOSM'.}
+\item{object}{An object of class 'NOSM'.}
+
+\item{...}{further arguments passed to or from other methods.}
 
 \item{y}{(default of 3) The adjustment value for the computation of the z
 value (see Strona & Veech, 2015).}
@@ -17,13 +19,13 @@ Returns object of class 'summary.NOSM' with a Type attribute (e.g.
   'bip') which is inherited. For NOSM objects of Type 'Pot_dir', 'bip' or
   'Dir', the summary.NOSM method returns the mean of the overlap values for
   the "in nodes" (NOS_In), the mean of the overlap values for the "out nodes"
-  (NOS_Out), the mean of Nos In and Nos Out (NOS; N_bar), the standard
+  (NOS_Out), the mean of Nos In and Nos Out (NOS), the standard
   deviation of the overlap values for the "in nodes" (MOD_In), the SD of the
   overlap values for the "out nodes" (MOD_Out), and the SD of the combined
   set of overlap values (MOD; network modularity).
 
   For NOSM objects of Type 'Dir' and 'Undir', the summary.NOSM method returns
-  just the NOS (N_bar) and MOD values (network modularity).
+  just the NOS and MOD values (network modularity).
 
   For all types of NOSM object, the z value and associated p value are also
   provided (see Strona & Veech, 2015).

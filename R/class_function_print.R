@@ -1,7 +1,7 @@
 
 #' @export
 
-print.summary.NOSM <- function(x){
+print.summary.NOSM <- function(x, ...){
   if (attributes(x)$Type == "Pot_dir") cat("Data = Directed network; network of potential interactions provided by user", "\n",
                                            "Z-tuning parameter =", attributes(x)$z_tune, "\n")
   if (attributes(x)$Type == "Pot_undir") cat("Data = Undirected network; network of potential interactions provided by user", "\n",

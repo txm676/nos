@@ -2,7 +2,7 @@
 % Please edit documentation in R/undir.R
 \name{NOSM_undir}
 \alias{NOSM_undir}
-\title{Compute N_bar using an undirected network without a user provided
+\title{Compute NOS using an undirected network without a user provided
 network of potential interactions}
 \usage{
 NOSM_undir(net, perc = 1, sl = 1)
@@ -13,7 +13,7 @@ dataframe with two columns. Each value in a column is a node. Nodes can be
 identified using numbers or characters.}
 
 \item{perc}{(default to 1) - the fraction of node pair comparisons to be
-performed to compute N_bar. We recommend performing all possible pair
+performed to compute NOS. We recommend performing all possible pair
 comparisons (perc = 1). However, for exploratory analyses on large sets of
 networks (or for very large networks), the possibility of using a lower
 fraction of pair comparisons is a useful option.}
@@ -28,8 +28,8 @@ A list of class 'NOSM' with a 'Type' attribute 'Undir', containing a
   more useful summary statistics.
 }
 \description{
-Computation of N_bar (NOS) using an undirected network (e.g. a
-  social network) and without a user provided network of potential
+Computation of NOS using an undirected network (e.g. a
+  social co-occurence network) and without a user provided network of potential
   interactions. In an undirected network, all nodes are considered as
   potential interacting partners.
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/pot_undir.R
 \name{NOSM_POT_undir}
 \alias{NOSM_POT_undir}
-\title{Compute N_bar using an undirected network and with a user provided
+\title{Compute NOS using an undirected network and with a user provided
 network of potential interactions}
 \usage{
 NOSM_POT_undir(net, pot_net, perc = 1, sl = 1)
@@ -19,7 +19,7 @@ trophic rule). pot_net should have the same structure as net (e.g. it
 should be a data frame or matrix).}
 
 \item{perc}{(default to 1) - the fraction of node pair comparisons to be
-performed to compute N_bar. We recommend performing all possible pair
+performed to compute NOS. We recommend performing all possible pair
 comparisons (perc = 1). However, for exploratory analyses on large sets of
 networks (or for very large networks), the possibility of using a lower
 fraction of pair comparisons is a useful option.}
@@ -34,8 +34,8 @@ A list of class 'NOSM' with a 'Type' attribute 'Pot_undir',
   methods provides more useful summary statistics.
 }
 \description{
-Computation of N_bar (NOS) using an undirected network (e.g. a
-  social network) and with a user provided network of potential interactions.
+Computation of NOS using an undirected network (e.g. a
+  social co-occurence network) and with a user provided network of potential interactions.
   In an undirected network, all nodes are considered as potential interacting
   partners.
 }

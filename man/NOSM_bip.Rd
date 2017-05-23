@@ -2,7 +2,7 @@
 % Please edit documentation in R/bip.R
 \name{NOSM_bip}
 \alias{NOSM_bip}
-\title{Compute N_bar using a bipartite network}
+\title{Compute NOS using a bipartite network}
 \usage{
 NOSM_bip(net, perc = 1, sl = 1)
 }
@@ -15,7 +15,7 @@ characters. For each row (i.e. node pair), the value in the first column is
 column.}
 
 \item{perc}{(default to 1) - the fraction of node pair comparisons to be
-performed to compute N_bar. We recommend performing all possible pair
+performed to compute NOS. We recommend performing all possible pair
 comparisons (perc = 1). However, for exploratory analyses on large sets of
 networks (or for very large networks), the possibility of using a lower
 fraction of pair comparisons is a useful option.}
@@ -34,10 +34,10 @@ A list (two elements) of class 'NOSM' with a 'Type' attribute 'bip'.
   statistics.
 }
 \description{
-Computation of N_bar (NOS) using a bipartite network (e.g.
+Computation of NOS using a bipartite network (e.g.
   plant-pollinator network), where nodes can be formally categorized into two
   distinct categories (e.g. plant-pollinators). All nodes in one category
-  will be considered as potential partners for the  nodes in the other
+  will be considered as potential partners for the nodes in the other
   category (and vice-versa).
 }
 \examples{

@@ -1,12 +1,9 @@
-#' Compute N_bar using a directed network and with a user provided network
+#' Compute NOS using a directed network and with a user provided network
 #' of potential interactions
 #'
-#' @description Computation of N_bar (NOS) using an directed network (e.g. a
+#' @description Computation of NOS using an directed network (e.g. a
 #'   food web) and with a user provided network of potential interactions.
-#' @usage NOSM_POT_dir(net, pot_net, perc = 1, sl = 1). In a directed, unimode
-#'   network, all nodes having at least an in-coming link will be considered as
-#'   potential partners for nodes having at least an out-going link and
-#'   vice-versa.
+#' @usage NOSM_POT_dir(net, pot_net, perc = 1, sl = 1)
 #' @param net A network, in the form of an edge list. This should be a matrix or
 #'   dataframe with two columns. Each value in a column is a node. Nodes can be
 #'   identified using numbers or characters.
@@ -16,7 +13,7 @@
 #'   trophic rule). pot_net should have the same structure as net (e.g. it
 #'   should be a data frame or matrix).
 #' @param perc (default to 1) - the fraction of node pair comparisons to be
-#'   performed to compute N_bar. We recommend performing all possible pair
+#'   performed to compute NOS. We recommend performing all possible pair
 #'   comparisons (perc = 1). However, for exploratory analyses on large sets of
 #'   networks (or for very large networks), the possibility of using a lower
 #'   fraction of pair comparisons is a useful option.

@@ -1,9 +1,12 @@
 
+
 #this creates three lists of neighbors for each node; one including all neighbors, one including those
 #consuming the node, and one including those 'consumed' by the node. If a potential network of interactions
 #is provided (pot_net), the function generates three analogous lists for potential neighbors. 'net' is
 #a network in the form of a edge list, [[0,1],[1,2],...].
 
+#' @importFrom stats runif
+#' @importFrom dplyr filter
 
 adj <- function(net, pot_net = NULL){
   if (!is.matrix(net) && !is.data.frame(net)) stop("net should be a matrix or dataframe")
@@ -15,8 +18,8 @@ adj <- function(net, pot_net = NULL){
   adj_in <- list()
   adj_out <- list()
   for (i in vall2){
-    n2 <- dplyr::filter(net, X2 == i)
-    n1 <- dplyr::filter(net, X1 == i)
+    n2 <- dplyr::filter(net, "X2 == i")
+    n1 <- dplyr::filter(net, "X1 == i")
     if (length(n2$X2) != 0){
       adj_in[[i]] <- sort(unique(n2$X1))
     } else {

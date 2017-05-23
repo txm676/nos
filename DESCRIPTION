@@ -4,11 +4,12 @@ Title: Compute node overlap and segregation in ecological networks
 Version: 1.0.0
 Author: Thomas J. Matthews and Giovanni Strona
 Maintainer: Thomas J. Matthews <txm676@gmail.com>
-Description: A package to calculate the N_bar metric and associated NOS 
-    framework in Strona et al. (2017). The functions provided in the package 
-    enable assessment of structural patterns in a variety of network types 
-    ranging from complete node segregation to perfect nestedness, in addition to
-    providing a measure of network modularity. 
+Description: A package to calculate NOS (node overlap and segregation) and the 
+    associated metrics described in Strona and Veech (2015) and Strona et al. 
+    (2017). The functions provided in the package enable assessment of 
+    structural patterns ranging from complete node segregation to perfect 
+    nestedness in a variety of network types. In addition, they provide a 
+    measure of network modularity.  
 License: GPL-3
 Citation: Strona, G., Matthews, T.J., Kortsch, S. and Veech, J.A. (2017) NOS: A 
     software suite to compute node overlap  and segregation in ecological 
@@ -18,7 +19,7 @@ Citation: Strona, G., Matthews, T.J., Kortsch, S. and Veech, J.A. (2017) NOS: A
     Evolution, 6(8), 907-915.
 URL: https://github.com/txm676/nos
 BugReports: https://github.com/txm676/nos/issues
-Imports: dplyr, gmp
+Imports: dplyr, gmp, stats
 Depends: R(>= 3.0.0)
 Encoding: UTF-8
 LazyData: true

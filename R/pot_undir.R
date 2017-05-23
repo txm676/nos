@@ -1,8 +1,8 @@
-#' Compute N_bar using an undirected network and with a user provided
+#' Compute NOS using an undirected network and with a user provided
 #' network of potential interactions
 #'
-#' @description Computation of N_bar (NOS) using an undirected network (e.g. a
-#'   social network) and with a user provided network of potential interactions.
+#' @description Computation of NOS using an undirected network (e.g. a
+#'   social co-occurence network) and with a user provided network of potential interactions.
 #'   In an undirected network, all nodes are considered as potential interacting
 #'   partners.
 #' @usage NOSM_POT_undir(net, pot_net, perc = 1, sl = 1)
@@ -15,7 +15,7 @@
 #'   trophic rule). pot_net should have the same structure as net (e.g. it
 #'   should be a data frame or matrix).
 #' @param perc (default to 1) - the fraction of node pair comparisons to be
-#'   performed to compute N_bar. We recommend performing all possible pair
+#'   performed to compute NOS. We recommend performing all possible pair
 #'   comparisons (perc = 1). However, for exploratory analyses on large sets of
 #'   networks (or for very large networks), the possibility of using a lower
 #'   fraction of pair comparisons is a useful option.
@@ -25,7 +25,6 @@
 #' @return A list of class 'NOSM' with a 'Type' attribute 'Pot_undir',
 #'   containing a vector of overlap values. The \code{\link{summary.NOSM}}
 #'   methods provides more useful summary statistics.
-#'
 #' @examples
 #' data(boreal)
 #' d <- sample(nrow(boreal), 1000, replace = FALSE) #create a random pot_net

@@ -1,7 +1,7 @@
-#' Compute N_bar using a directed network without a user provided network
+#' Compute NOS using a directed network without a user provided network
 #' of potential interactions
 #'
-#' @description Computation of N_bar (NOS) using a directed network (e.g. food
+#' @description Computation of NOS using a directed network (e.g. food
 #'   web) and without a user provided network of potential interactions. In a
 #'   directed, unimode network, all nodes having at least an in-coming link will
 #'   be considered as potential partners for nodes having at least an out-going
@@ -14,7 +14,7 @@
 #'   'consumed' (or pollinated, parasitized etc) by the value in the second
 #'   column.
 #' @param perc (default to 1) - the fraction of node pair comparisons to be
-#'   performed to compute N_bar. We recommend performing all possible pair
+#'   performed to compute NOS. We recommend performing all possible pair
 #'   comparisons (perc = 1). However, for exploratory analyses on large sets of
 #'   networks (or for very large networks), the possibility of using a lower
 #'   fraction of pair comparisons is a useful option.
