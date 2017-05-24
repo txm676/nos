@@ -1,6 +1,10 @@
-#' A sample *** network from **boreal**
+#' A sample food-web network from the boreal region of the Barents Sea
 #'
-#' A **Boreal food-web network of ** species in ***.
+#' The sample network is a marine food web from the boreal region of the Barents
+#' Sea. The Barents Sea is a large, open sub-arctic shelf sea bordering the
+#' Arctic Ocean. The sample food web contains 180 trophospecies, consisting of
+#' detritus, 8 basal taxa, 32 zooplankton, 66 benthic, 56 fish, 8 sea birds and
+#' 9 marine mammal, and 1546 feeding interactions.
 #'
 #' @usage data(boreal)
 #' @format A data frame with 2 columns and 1546 rows. Each row is a node pair
