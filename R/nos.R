@@ -19,9 +19,10 @@
 #'   directed unimode networks (e.g. food webs) when pot_net is not provided, 2)
 #'   NOSM_undir - for undirected networks (e.g. co-occurrence networks) when
 #'   pot_net is not provided, 3) NOSM_bip - for bipartite networks (e.g.
-#'   plant-pollinator networks), 4) NOSM_pot_dir - for directed unimode networks
-#'   (e.g. food webs) when pot_net is provided, and 5) NOSM_pot_undir - for
-#'   undirected networks (e.g. co-occurrence networks) when pot_net is provided.
+#'   plant-pollinator networks), 4) NOSM_pot_dir - for directed unimode (e.g.
+#'   food webs) and bipartite networks when pot_net is provided, and 5)
+#'   NOSM_pot_undir - for undirected networks (e.g. co-occurrence networks) when
+#'   pot_net is provided.
 #'
 #'  Each of these five main functions produces an output with class 'NOSM'. An
 #'  S3 method (summary.NOSM) provides the summary statistics of interest (e.g..
