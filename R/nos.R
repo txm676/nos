@@ -12,6 +12,9 @@
 #'   nestedness in a variety of network types. In addition, they provide a
 #'   measure of network modularity.
 #'
+#'   Does not currently work on Macs (OS X El Capitan) as the dependent
+#'   gmp package is not yet available in binary form for OS X El Capitan.
+#'
 #' @details There are five main S3 generics that the user can choose depending
 #'   on whether a directed, bipartite or undirected network is provided as
 #'   input, and whether a network of potential interactions (pot_net) is
