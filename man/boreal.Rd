@@ -3,7 +3,7 @@
 \docType{data}
 \name{boreal}
 \alias{boreal}
-\title{A sample *** network from **boreal**}
+\title{A sample food-web network from the boreal region of the Barents Sea}
 \format{A data frame with 2 columns and 1546 rows. Each row is a node pair
    where the first element of each node pair is 'consumed' (or pollinated
    etc) by the second element.}
@@ -16,7 +16,11 @@ Kortsch, S. et al. 2015. Climate change alters the structure of
 data(boreal)
 }
 \description{
-A **Boreal food-web network of ** species in ***.
+The sample network is a marine food web from the boreal region of the Barents
+Sea. The Barents Sea is a large, open sub-arctic shelf sea bordering the
+Arctic Ocean. The sample food web contains 180 trophospecies, consisting of
+detritus, 8 basal taxa, 32 zooplankton, 66 benthic, 56 fish, 8 sea birds and
+9 marine mammal, and 1546 feeding interactions.
 }
 \examples{
 data(boreal)

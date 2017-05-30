@@ -42,6 +42,7 @@ Computation of NOS using a bipartite network (e.g.
 }
 \examples{
 data(boreal)
-x <- NOSM_bip(boreal, perc = 1, sl = 1)
+y <-  boreal[sample(rownames(boreal), 100, FALSE),] #subset 100 rows for speed
+x <- NOSM_bip(y, perc = 1, sl = 1)
 summary(x)
 }

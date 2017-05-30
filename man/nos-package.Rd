@@ -12,6 +12,9 @@ A package to calculate NOS (node overlap and segregation) and
   structural patterns ranging from complete node segregation to perfect
   nestedness in a variety of network types. In addition, they provide a
   measure of network modularity.
+
+  Does not currently work on Macs (OS X El Capitan) as the dependent
+  gmp package is not yet available in binary form for OS X El Capitan.
 }
 \details{
 There are five main S3 generics that the user can choose depending
@@ -21,9 +24,10 @@ There are five main S3 generics that the user can choose depending
   directed unimode networks (e.g. food webs) when pot_net is not provided, 2)
   NOSM_undir - for undirected networks (e.g. co-occurrence networks) when
   pot_net is not provided, 3) NOSM_bip - for bipartite networks (e.g.
-  plant-pollinator networks), 4) NOSM_pot_dir - for directed unimode networks
-  (e.g. food webs) when pot_net is provided, and 5) NOSM_pot_undir - for
-  undirected networks (e.g. co-occurrence networks) when pot_net is provided.
+  plant-pollinator networks), 4) NOSM_pot_dir - for directed unimode (e.g.
+  food webs) and bipartite networks when pot_net is provided, and 5)
+  NOSM_pot_undir - for undirected networks (e.g. co-occurrence networks) when
+  pot_net is provided.
 
  Each of these five main functions produces an output with class 'NOSM'. An
  S3 method (summary.NOSM) provides the summary statistics of interest (e.g..
@@ -43,6 +47,11 @@ There are five main S3 generics that the user can choose depending
  n or k are too large (> roughly 170) factorial(n || k) produces Inf.
  In these cases gmp::factorialZ is used instead. See the help documentation
  for the 'gmp' package for further information.
+
+ It should be noted that due to differences in the way R and Python calculate
+ the standard deviation, the modularity values and z values calculated using
+ this R package differ very slightly (less than 0.2) from the values
+ calculated using the Python scrip from Strona et al. (2017).
 }
 \references{
 Strona, G., Matthews, T.J., Kortsch, S. and Veech, J.A. (2017)

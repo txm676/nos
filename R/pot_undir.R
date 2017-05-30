@@ -27,9 +27,10 @@
 #'   methods provides more useful summary statistics.
 #' @examples
 #' data(boreal)
-#' d <- sample(nrow(boreal), 1000, replace = FALSE) #create a random pot_net
-#' pot_net <- boreal[d,] #by randomly sampling 1000 rows from boreal
-#' x <- NOSM_POT_undir(boreal, pot_net, perc = 1, sl = 1)
+#' y <-  boreal[sample(rownames(boreal), 600, FALSE),] #subset 600 rows for speed
+#' d <- sample(nrow(y), 400, replace = FALSE) #create a random pot_net
+#' pot_net <- y[d,] #by randomly sampling 400 rows from boreal
+#' x <- NOSM_POT_undir(y, pot_net, perc = 1, sl = 1)
 #' summary(x)
 #' @export
 

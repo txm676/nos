@@ -32,7 +32,8 @@
 #'   and Evolution, 6(8), 907-915.
 #' @examples
 #' data(boreal)
-#' x <- NOSM_bip(boreal, perc = 1, sl = 1)
+#' z <- boreal[sample(rownames(boreal), 400, FALSE),] #subset for speed
+#' x <- NOSM_bip(z, perc = 1, sl = 1)
 #' summary(x, y = 3)
 #' @importFrom stats sd
 #' @export

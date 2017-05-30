@@ -22,7 +22,8 @@
 #'   more useful summary statistics.
 #' @examples
 #' data(boreal)
-#' x <- NOSM_undir(boreal, perc = 1, sl = 1)
+#' y <-  boreal[sample(rownames(boreal), 100, FALSE),] #subset 100 rows for speed
+#' x <- NOSM_undir(y, perc = 1, sl = 1)
 #' summary(x)
 #' @export
 

@@ -1,6 +1,6 @@
 Package: nos
 Type: Package
-Title: Compute node overlap and segregation in ecological networks
+Title: Compute Node Overlap and Segregation in Ecological Networks
 Version: 1.0.0
 Author: Thomas J. Matthews and Giovanni Strona
 Maintainer: Thomas J. Matthews <txm676@gmail.com>
@@ -11,12 +11,6 @@ Description: A package to calculate NOS (node overlap and segregation) and the
     nestedness in a variety of network types. In addition, they provide a 
     measure of network modularity.  
 License: GPL-3
-Citation: Strona, G., Matthews, T.J., Kortsch, S. and Veech, J.A. (2017) NOS: A 
-    software suite to compute node overlap  and segregation in ecological 
-    networks. Ecography. In review.
-    Strona, G. & Veech, J. A. (2015). A new measure of ecological network
-    structure based on node overlap and segregation. Methods in Ecology and 
-    Evolution, 6(8), 907-915.
 URL: https://github.com/txm676/nos
 BugReports: https://github.com/txm676/nos/issues
 Imports: dplyr, gmp, stats
