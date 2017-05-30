@@ -3,6 +3,8 @@
 ###Internal functions (part 1)
 
 
+#' @importFrom gmp factorialZ
+
 ###converts the user's net and pot_net objects to numeric data frames in which each columns starts at 1;
 ##can deal with factors.
 
