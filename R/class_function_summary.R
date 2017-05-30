@@ -47,7 +47,7 @@ summary.NOSM <- function(object, ..., y = 3){
     d <- round(mean(c(a, b)), 3)
     e <- round(sd(object$ov_in),3)
     f <- round(sd(object$ov_out),3)
-    g <- round(sd(c(object$ov_in, object$ov_out)), 3)
+    g <- round(((e + f) / 2), 3)
     z <- mean(c(object$ov_in, object$ov_out)) / ((sd(c(object$ov_in, object$ov_out))) / sqrt(y))
     p <- z2p(z)
     res <- c(a, b, d, e, f, g, z, p)

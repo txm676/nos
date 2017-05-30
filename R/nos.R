@@ -43,6 +43,11 @@
 #'  In these cases gmp::factorialZ is used instead. See the help documentation
 #'  for the 'gmp' package for further information.
 #'
+#'  It should be noted that due to differences in the way R and Python calculate
+#'  the standard deviation, the modularity values and z values calculated using
+#'  this R package differ very slightly (less than 0.2) from the values
+#'  calculated using the Python scrip from Strona et al. (2017).
+#'
 #' @author Thomas J. Matthews and Giovanni Strona
 #' @references Strona, G., Matthews, T.J., Kortsch, S. and Veech, J.A. (2017)
 #'   NOS: A software suite to compute node overlap and segregation in
