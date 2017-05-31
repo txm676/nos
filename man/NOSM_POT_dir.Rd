@@ -43,8 +43,8 @@ Computation of NOS using an directed network (e.g. a
 }
 \examples{
 data(boreal)
-y <-  boreal[sample(rownames(boreal), 600, FALSE),] #subset 600 rows for speed
-d <- sample(nrow(y), 400, replace = FALSE) #create a random pot_net
+y <-  boreal[1:300,] #subset 600 rows for speed #subset 600 rows for speed
+d <- sample(nrow(y), 200, replace = FALSE) #create a random pot_net
 pot_net <- y[d,] #by randomly sampling 400 rows from boreal
 x <- NOSM_POT_dir(y, pot_net, perc = 1, sl = 1)
 summary(x)

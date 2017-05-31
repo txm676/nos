@@ -40,7 +40,7 @@ S3 method for class 'NOSM'. summary.NOSM creates summary
 }
 \examples{
 data(boreal)
-z <- boreal[sample(rownames(boreal), 400, FALSE),] #subset for speed
+z <- boreal[sample(rownames(boreal), 200, FALSE),] #subset for speed
 x <- NOSM_bip(z, perc = 1, sl = 1)
 summary(x, y = 3)
 }
