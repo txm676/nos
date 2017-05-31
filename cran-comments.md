@@ -1,5 +1,7 @@
 
-##This is the first submission of this package
+##This is a re-submission of the first version of this package
+I have corrected the description file issue and
+added DOI for citations in the Description file.
 
 ##Test environments
 *local Windows 10 install, R 3.4.0
