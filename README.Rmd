@@ -12,8 +12,8 @@ knitr::opts_chunk$set(
 
 
 # The `nos` R package
-[![Downloads](http://cranlogs.r-pkg.org/badges/gambin?color=brightgreen)](https://cran.r-project.org/package=gambin)
-[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/gambin)](https://cran.r-project.org/package=gambin)
+[![Downloads](http://cranlogs.r-pkg.org/badges/nos?color=brightgreen)](https://cran.r-project.org/package=nos)
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/nos)](https://cran.r-project.org/package=nos)
 
 
 Calculate NOS (node overlap and segregation) and the associated metrics
