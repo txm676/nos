@@ -42,7 +42,8 @@
 #'  the other category (and vice-versa).
 #'
 #'  Input data should be in the form of an edge list or frequency interaction
-#'  matrix. If the input data are in the format of a frequency interaction
+#'  matrix (this can be either a bipartite graph type or a squared adjacency
+#'  matrix type). If the input data are in the format of a frequency interaction
 #'  matrix, as used in the \link[bipartite]{bipartite} R package, then
 #'  \code{\link{freqMat_2_edge}} should be used first, to convert the
 #'  interaction matrix to an edge list prior to running any 'nos' functions.

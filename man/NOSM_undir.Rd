@@ -10,7 +10,10 @@ NOSM_undir(net, perc = 1, sl = 1)
 \arguments{
 \item{net}{A network, in the form of an edge list. This should be a matrix or
 dataframe with two columns. Each value in a column is a node. Nodes can be
-identified using numbers or characters.}
+identified using numbers or characters. Data can also be in the format of a
+frequency interaction matrix, as used in the \link[bipartite]{bipartite} R
+package. In these cases \code{\link{freqMat_2_edge}} should be used first,
+to convert the interaction matrix to an edge list.}
 
 \item{perc}{(default to 1) - the fraction of node pair comparisons to be
 performed to compute NOS. We recommend performing all possible pair

@@ -4,20 +4,38 @@
 \alias{freqMat_2_edge}
 \title{Convert a frequency interaction matrix to an edge list}
 \usage{
-freqMat_2_edge(x)
+freqMat_2_edge(x, bip = F, sp_nam = F)
 }
 \arguments{
-\item{x}{A frequency interaction matrix, in which rows are species that are
+\item{x}{A frequency interaction matrix, in which rows and columns represent
+species and each value should be numeric, indicating the number of
+interactions between two species. The input frequency interaction matrix
+can be in the form of a squared adjacency matrix (e.g. a food web, where
+the rows and columns represent the same set of species) or representing a
+bipartite graph where rows and columns correspond to different entities. In
+regards to the latter, the rows must correspond to species that are
 consumed (or pollinated etc) and columns are those species that are the
 consumers (or pollinators etc). For example, for a plant-pollinator
 interaction matrix, the rows would be the plant species, and the columns
-the pollinator species. The interaction matrix can be a dataframe or a
-matrix. Each value should be numeric, indicating the number of interactions
-between two species. The names of the species must be set as the rownames
-and column names of the interaction matrix prior to running the function.
-As the functions in the 'nos' R package are based on presence-absence data,
+the pollinator species. The input interaction matrix can be a dataframe or
+a matrix. The names of the species can be set as the rownames and column
+names of the interaction matrix prior to running the function; if names are
+not provided, the function automatically names the species (see below). As
+the functions in the 'nos' R package are based on presence-absence data,
 all interactions greater than or equal to 1 are set to 1. Cannibalistic
 interactions are allowed, i.e. the same species can be in a row and column.}
+
+\item{bip}{A logical value describing whether the input matrix represents a
+bipartite graph (bip = T), or a squared adjaceny matrix (bip = F: the
+default).}
+
+\item{sp_nam}{A logical value describing whether the user has provided.
+species names i.e. row and column names (sp_nam = T) or not (sp_nam = F:
+the default).If species names are not provided and the input matrix is a
+squared adjaceny matrix, the rows and columns are given the same identity
+values (i.e. numbers). If the input matrix represent a bipartite graph,
+rows and columns are assumed to correspond to different entities and are
+given different unique values.}
 }
 \value{
 An edge list in the form of a dataframe. Each value in a column is a
@@ -27,13 +45,15 @@ An edge list in the form of a dataframe. Each value in a column is a
 }
 \description{
 Converts frequency interaction matrices, as used with the
-  \link[bipartite]{bipartite} R package, into edge lists. As the functions in the 'nos' R
-  package are based on presence-absence data, all interactions greater than
-  or equal to 1 are set to 1.
+  \link[bipartite]{bipartite} R package, into edge lists. The input matrix
+  can be either a matrix representing a bipartite graph or a squared
+  adjacency matrix. As the functions in the 'nos' R package are based on
+  presence-absence data, all interactions greater than or equal to 1 are set
+  to 1.
 }
 \examples{
-sim_dat <- matrix(c(0, 2, 1, 0, 1, 2, 0, 1), ncol = 4) #simulate food web matrix
+sim_dat <- matrix(c(0, 2, 1, 0, 1, 2, 0, 1), ncol = 4) #simulate bipartite matrix
 rownames(sim_dat) <- c("A", "B") #name the consumed species
 colnames(sim_dat) <- c("C", "D", "A", "E") #name the consumer species (with one cannibal interaction)
-freqMat_2_edge(sim_dat)
+freqMat_2_edge(sim_dat, bip = T, sp_nam = T)
 }

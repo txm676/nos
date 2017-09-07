@@ -13,7 +13,7 @@ dataframe with two columns. Each value in a column is a node (e.g. a food
 item in a trophic-web). Nodes can be identified using numbers or
 characters. For each row (i.e. node pair), the value in the first column is
 'consumed' (or pollinated, parasitized etc) by the value in the second
-column.Data can also be in the format of a frequency interaction matrix,
+column. Data can also be in the format of a frequency interaction matrix,
 as used in the \link[bipartite]{bipartite} R package. In these cases
 \code{\link{freqMat_2_edge}} should be used first, to convert the
 interaction matrix to an edge list.}
