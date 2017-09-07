@@ -1,7 +1,7 @@
 Package: nos
 Type: Package
 Title: Compute Node Overlap and Segregation in Ecological Networks
-Version: 1.0.0
+Version: 1.1.0
 Author: Thomas J. Matthews and Giovanni Strona
 Maintainer: Thomas J. Matthews <txm676@gmail.com>
 Description: Calculate NOS (node overlap and segregation) and 

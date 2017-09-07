@@ -10,6 +10,7 @@
 
 form <- function(x){
   if (ncol(x) > 2) warning("More than 2 columns in a network matrix; only first 2 will be evaluated")
+  if (is.matrix(x)) x <- as.data.frame(x)
   colnames(x) <- c("X1", "X2")
   if (is.factor(x$X1)) x$X1 <- as.character(x$X1)
   if (is.factor(x$X2)) x$X2 <- as.character(x$X2)

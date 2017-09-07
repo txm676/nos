@@ -1,7 +1,6 @@
 
-##This is a re-submission of the first version of this package
-I have corrected the description file issue and
-added DOI for citations in the Description file.
+##This is a new version of this package
+I have added a new function and updated the help files.
 
 ##Test environments
 *local Windows 10 install, R 3.4.0
@@ -13,7 +12,7 @@ have the same problemon Ubuntu (via travis -ci) R 3.4.0
 
 
 ##R CMD check results
-0 errors | 0 warnings | 1 note
+0 errors | 0 warnings | 0 note
 
 The first note corresponds to a first submission
 

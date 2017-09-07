@@ -13,6 +13,9 @@ adj <- function(net, pot_net = NULL){
   if (any(is.na(net))) stop("NAs present in user's data")
   if (!is.null(pot_net)) if(any(is.na(pot_net))) stop("NAs present in user's data")
   if (is.factor(net[, 1]) || is.factor(net[, 2])) warning("data include factors: converted to numeric")
+  if (is.matrix(net)) net <- as.data.frame(net)
+  if (!is.null(pot_net) && is.matrix(pot_net)) pot_net <- as.data.frame(pot_net)
+
   net <- form(net)
   vall2 <- sort(union(net[, 1], net[, 2]))
   adj_in <- list()

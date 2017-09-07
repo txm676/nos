@@ -10,7 +10,10 @@ NOSM_POT_dir(net, pot_net, perc = 1, sl = 1)
 \arguments{
 \item{net}{A network, in the form of an edge list. This should be a matrix or
 dataframe with two columns. Each value in a column is a node. Nodes can be
-identified using numbers or characters.}
+identified using numbers or characters.Data can also be in the format of a frequency interaction matrix,
+as used in the \link[bipartite]{bipartite} R package. In these cases
+\code{\link{freqMat_2_edge}} should be used first, to convert the
+interaction matrix to an edge list.}
 
 \item{pot_net}{A network of all potential interactions. These should include,
 as a minimum, all the observed interactions (i.e. all links in net),plus

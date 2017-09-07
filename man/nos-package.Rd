@@ -43,6 +43,12 @@ There are five main S3 generics that the user can choose depending
  in one category will be considered as potential partners for the nodes in
  the other category (and vice-versa).
 
+ Input data should be in the form of an edge list or frequency interaction
+ matrix. If the input data are in the format of a frequency interaction
+ matrix, as used in the \link[bipartite]{bipartite} R package, then
+ \code{\link{freqMat_2_edge}} should be used first, to convert the
+ interaction matrix to an edge list prior to running any 'nos' functions.
+
  The internal function comb calculates factorials. If the user provided
  n or k are too large (> roughly 170) factorial(n || k) produces Inf.
  In these cases gmp::factorialZ is used instead. See the help documentation
