@@ -4,7 +4,7 @@
 \alias{freqMat_2_edge}
 \title{Convert a frequency interaction matrix to an edge list}
 \usage{
-freqMat_2_edge(x, bip = F, sp_nam = F)
+freqMat_2_edge(x, bip = FALSE, sp_nam = FALSE)
 }
 \arguments{
 \item{x}{A frequency interaction matrix, in which rows and columns represent
@@ -26,11 +26,11 @@ all interactions greater than or equal to 1 are set to 1. Cannibalistic
 interactions are allowed, i.e. the same species can be in a row and column.}
 
 \item{bip}{A logical value describing whether the input matrix represents a
-bipartite graph (bip = T), or a squared adjaceny matrix (bip = F: the
+bipartite graph (bip = TRUE), or a squared adjaceny matrix (bip = FALSE: the
 default).}
 
 \item{sp_nam}{A logical value describing whether the user has provided.
-species names i.e. row and column names (sp_nam = T) or not (sp_nam = F:
+species names i.e. row and column names (sp_nam = TRUE) or not (sp_nam = FALSE:
 the default).If species names are not provided and the input matrix is a
 squared adjaceny matrix, the rows and columns are given the same identity
 values (i.e. numbers). If the input matrix represent a bipartite graph,
@@ -54,6 +54,6 @@ Converts frequency interaction matrices, as used with the
 \examples{
 sim_dat <- matrix(c(0, 2, 1, 0, 1, 2, 0, 1), ncol = 4) #simulate bipartite matrix
 rownames(sim_dat) <- c("A", "B") #name the consumed species
-colnames(sim_dat) <- c("C", "D", "A", "E") #name the consumer species (with one cannibal interaction)
-freqMat_2_edge(sim_dat, bip = T, sp_nam = T)
+colnames(sim_dat) <- c("C", "D", "A", "E") #name the consumer species
+freqMat_2_edge(sim_dat, bip = TRUE, sp_nam = TRUE)
 }

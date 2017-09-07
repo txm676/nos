@@ -6,7 +6,7 @@
 #'   adjacency matrix. As the functions in the 'nos' R package are based on
 #'   presence-absence data, all interactions greater than or equal to 1 are set
 #'   to 1.
-#' @usage freqMat_2_edge(x, bip = F, sp_nam = F)
+#' @usage freqMat_2_edge(x, bip = FALSE, sp_nam = FALSE)
 #' @param x A frequency interaction matrix, in which rows and columns represent
 #'   species and each value should be numeric, indicating the number of
 #'   interactions between two species. The input frequency interaction matrix
@@ -25,10 +25,10 @@
 #'   all interactions greater than or equal to 1 are set to 1. Cannibalistic
 #'   interactions are allowed, i.e. the same species can be in a row and column.
 #' @param bip A logical value describing whether the input matrix represents a
-#'   bipartite graph (bip = T), or a squared adjaceny matrix (bip = F: the
+#'   bipartite graph (bip = TRUE), or a squared adjaceny matrix (bip = FALSE: the
 #'   default).
 #' @param sp_nam A logical value describing whether the user has provided.
-#'   species names i.e. row and column names (sp_nam = T) or not (sp_nam = F:
+#'   species names i.e. row and column names (sp_nam = TRUE) or not (sp_nam = FALSE:
 #'   the default).If species names are not provided and the input matrix is a
 #'   squared adjaceny matrix, the rows and columns are given the same identity
 #'   values (i.e. numbers). If the input matrix represent a bipartite graph,
@@ -42,26 +42,26 @@
 #' @examples
 #' sim_dat <- matrix(c(0, 2, 1, 0, 1, 2, 0, 1), ncol = 4) #simulate bipartite matrix
 #' rownames(sim_dat) <- c("A", "B") #name the consumed species
-#' colnames(sim_dat) <- c("C", "D", "A", "E") #name the consumer species (with one cannibal interaction)
-#' freqMat_2_edge(sim_dat, bip = T, sp_nam = T)
+#' colnames(sim_dat) <- c("C", "D", "A", "E") #name the consumer species
+#' freqMat_2_edge(sim_dat, bip = TRUE, sp_nam = TRUE)
 
 #' @export
 
 
-freqMat_2_edge <- function(x, bip = F, sp_nam = F){
+freqMat_2_edge <- function(x, bip = FALSE, sp_nam = FALSE){
   if (anyNA(x)) stop("Nas present in interaction matrix")
   if (!all(vapply(x, is.numeric, logical(1)))) stop("interaction matrix should be numeric")
   if (any(x < 0) || all(x == 0)) stop("interaction matrix contains incorrect values")
 
   # if bip == F the matrix is expected to be an adjacency matrix, which should be squared
-  if (bip == F && dim(x)[1] != dim(x)[2]) stop("adjacency matrix must be squared")
+  if (bip == FALSE && dim(x)[1] != dim(x)[2]) stop("adjacency matrix must be squared")
 
 
   # if the input is an adjacency matrix, and rows and cols name are not provided, those
   #are assigned automatically. If row names are provided but not col names or viceversa,
   #available name are used (since rows and columns should represent the same set of species)
 
-  if (bip == F && sp_nam == F){
+  if (bip == FALSE && sp_nam == FALSE){
       rownames(x) <- 1:dim(x)[1]
       colnames(x) <- 1:dim(x)[1]
   }
@@ -71,7 +71,7 @@ freqMat_2_edge <- function(x, bip = F, sp_nam = F){
   #circumvent Murphy's law, both row and column names are always assigned from
   #scratch
 
-  if (bip != F && sp_nam == F){
+  if (bip != FALSE && sp_nam == FALSE){
       rownames(x) <- 1:dim(x)[1]
       colnames(x) <- (dim(x)[1]+1):(dim(x)[1]+dim(x)[2])
   }
@@ -88,7 +88,8 @@ freqMat_2_edge <- function(x, bip = F, sp_nam = F){
   c3 <- as.vector(t(as.matrix(x)))#transpose to get by rows
   df <- data.frame("V1" = rn2, "V2" = cn, "V3" = c3)
   df2 <- dplyr::filter(df, df$V3 > 0)
-  df2 <- dplyr::select(df2, V1, V2)
+  df2 <- data.frame(df2$V1, df2$V2)
+  colnames(df2) <- c("V1", "V2")
 
   if (nrow(df2) != length(which(x > 0)) || ncol(df2) != 2) stop("conversion of interaction matrix
                                                                 to edge list has failed")

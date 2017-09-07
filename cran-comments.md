@@ -14,7 +14,4 @@ have the same problemon Ubuntu (via travis -ci) R 3.4.0
 ##R CMD check results
 0 errors | 0 warnings | 0 note
 
-The first note corresponds to a first submission
-
-
 ##No downstream dependencies
