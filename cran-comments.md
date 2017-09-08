@@ -2,6 +2,11 @@
 ##This is a new version of this package
 I have added a new function and updated the help files.
 
+I could not find any double spaces in the description?
+
+Strona et al (2017) is in press and the 
+DOI is to be provided in subsequent package version
+
 ##Test environments
 *local Windows 10 install, R 3.4.0
 
