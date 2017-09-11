@@ -2,7 +2,7 @@
 ##This is a new version of this package
 I have added a new function and updated the help files.
 
-I removed the DOI from the readme file and replaced with URL
+I removed the readme file so no DOI problem anymore
 
 ##Test environments
 *local Windows 10 install, R 3.4.0
