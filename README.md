@@ -10,11 +10,10 @@ v3](https://img.shields.io/badge/License-GPLv3-yellow.svg)](https://www.gnu.org/
 
 Calculate NOS (node overlap and segregation) and the associated metrics
 described in Strona and Veech (2015) <DOI:10.1111/2041-210X.12395> and
-Strona et al. (2017; In Press, DOI to be provided in subsequent package
-version). The functions provided in the package enable assessment of
-structural patterns ranging from complete node segregation to perfect
-nestedness in a variety of network types. In addition, they provide a
-measure of network modularity.
+Strona et al. (2018) <DOI:10.1111/ecog.03447> . The functions provided
+in the package enable assessment of structural patterns ranging from
+complete node segregation to perfect nestedness in a variety of network
+types. In addition, they provide a measure of network modularity.
 
 The package is currently on CRAN and can be installed via
 
