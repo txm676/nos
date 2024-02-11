@@ -60,7 +60,7 @@ z2p <- function(z){
 
 comb <- function(n, k){
   if (k > n) return(0)
-  if (suppressWarnings(is.infinite(factorial(n))) || suppressWarnings(is.infinite(factorial(k)))){
+  if (suppressWarnings(is.infinite(factorial(n))) | suppressWarnings(is.infinite(factorial(k)))){
     x <- gmp::factorialZ(n) %/% gmp::factorialZ(k) %/% gmp::factorialZ(n - k) ##uses gmp and integer division when n is > 170
     x <- as.numeric(x)
     if(is.infinite(x)) stop("n and/or k is too large for the internal comb function; there are likely too many species", "\n",

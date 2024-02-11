@@ -4,9 +4,11 @@
 \name{boreal}
 \alias{boreal}
 \title{A sample food-web network from the boreal region of the Barents Sea}
-\format{A data frame with 2 columns and 1546 rows. Each row is a node pair
+\format{
+A data frame with 2 columns and 1546 rows. Each row is a node pair
    where the first element of each node pair is 'consumed' (or pollinated
-   etc) by the second element.}
+   etc) by the second element.
+}
 \source{
 Kortsch, S. et al. 2015. Climate change alters the structure of
    arctic marine food webs due to poleward shifts of boreal generalists.

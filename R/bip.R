@@ -38,7 +38,7 @@
 #' @export
 
 
-NOSM_bip <- function(net,perc = 1, sl = 1){
+NOSM_bip <- function(net, perc = 1, sl = 1){
   x <- adj(net)
   net <- form(net)
   vin <- sort(unique(net[, 2]))

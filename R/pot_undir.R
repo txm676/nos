@@ -37,8 +37,6 @@
 #' summary(x)
 #' @export
 
-
-
 NOSM_POT_undir <- function(net, pot_net, perc = 1, sl = 1){
   x <- adj(net, pot_net)
   y <- OV(x$adj_all, x$pot_all, perc, sl)

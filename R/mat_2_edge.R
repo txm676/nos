@@ -44,6 +44,7 @@
 #' rownames(sim_dat) <- c("A", "B") #name the consumed species
 #' colnames(sim_dat) <- c("C", "D", "A", "E") #name the consumer species
 #' freqMat_2_edge(sim_dat, bip = TRUE, sp_nam = TRUE)
+#' @import bipartite
 
 #' @export
 
@@ -51,17 +52,17 @@
 freqMat_2_edge <- function(x, bip = FALSE, sp_nam = FALSE){
   if (anyNA(x)) stop("Nas present in interaction matrix")
   if (!all(vapply(x, is.numeric, logical(1)))) stop("interaction matrix should be numeric")
-  if (any(x < 0) || all(x == 0)) stop("interaction matrix contains incorrect values")
+  if (any(x < 0) | all(x == 0)) stop("interaction matrix contains incorrect values")
 
   # if bip == F the matrix is expected to be an adjacency matrix, which should be squared
-  if (bip == FALSE && dim(x)[1] != dim(x)[2]) stop("adjacency matrix must be squared")
+  if (bip == FALSE & dim(x)[1] != dim(x)[2]) stop("adjacency matrix must be squared")
 
 
   # if the input is an adjacency matrix, and rows and cols name are not provided, those
   #are assigned automatically. If row names are provided but not col names or viceversa,
   #available name are used (since rows and columns should represent the same set of species)
 
-  if (bip == FALSE && sp_nam == FALSE){
+  if (bip == FALSE & sp_nam == FALSE){
       rownames(x) <- 1:dim(x)[1]
       colnames(x) <- 1:dim(x)[1]
   }
@@ -71,7 +72,7 @@ freqMat_2_edge <- function(x, bip = FALSE, sp_nam = FALSE){
   #circumvent Murphy's law, both row and column names are always assigned from
   #scratch
 
-  if (bip != FALSE && sp_nam == FALSE){
+  if (bip != FALSE & sp_nam == FALSE){
       rownames(x) <- 1:dim(x)[1]
       colnames(x) <- (dim(x)[1]+1):(dim(x)[1]+dim(x)[2])
   }
@@ -91,7 +92,7 @@ freqMat_2_edge <- function(x, bip = FALSE, sp_nam = FALSE){
   df2 <- data.frame(df2$V1, df2$V2)
   colnames(df2) <- c("V1", "V2")
 
-  if (nrow(df2) != length(which(x > 0)) || ncol(df2) != 2) stop("conversion of interaction matrix
+  if (nrow(df2) != length(which(x > 0)) | ncol(df2) != 2) stop("conversion of interaction matrix
                                                                 to edge list has failed")
 
   df2 <- apply(df2, 2, as.numeric)
