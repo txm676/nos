@@ -81,9 +81,8 @@ OV <- function(LL, LL_pot, perc = 1, sl = 1){
         if (j > i){
           pot <- intersect(LL_pot[[i]], LL_pot[[j]])
           if (sl == 1){
-            if (i %in% pot)  pot <- pot[-which(pot == i)]
-            if (j %in% pot)  pot <- pot[-which(pot == j)]
-          }
+            pot <- setdiff(pot, c(i,j))
+           }
           N <- length(pot)
           rr1 <- intersect(LL[[i]], pot)
           rr2 <- intersect(LL[[j]], pot)

@@ -31,10 +31,6 @@
 #' @export
 
 
-
-
-
-
 NOSM_undir <- function(net, perc = 1, sl = 1){
   x <- adj(net)
   net <- form(net)
