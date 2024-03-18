@@ -5,15 +5,17 @@
 \alias{testList}
 \title{Unit tests data}
 \format{
-An object of class \code{list} of length 4.
+An object of class \code{list} of length 2.
 }
 \usage{
 testList
 }
 \description{
-A dataset used in the unit tests. Has four elements, the first three
-being input data, and the fourth the output data. All generated using
-the python nos package to ensure the results match up.
+Datasets used in the unit tests. Is a list with two elements,
+each representing a different dataset. Each dataset is a list
+with four elements, the first three being input data, and the
+fourth the output data. All generated using the python nos
+package to ensure the results match up.
 }
 \examples{
 data(testList)
