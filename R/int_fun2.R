@@ -89,7 +89,7 @@ OV <- function(LL, LL_pot, perc = 1, sl = 1){
           N1 <- length(rr1)
           N2 <- length(rr2)
           if (min(N1,N2)==0){
-            N_ij<-0
+            N_ij <- 0
           } else {
             S <- length(intersect(rr1, rr2))
             co <- 0
@@ -98,20 +98,20 @@ OV <- function(LL, LL_pot, perc = 1, sl = 1){
               co <- co + (ccc * k)
             }
             lowercase_omega_ij <- (S-co)/min(N1,N2) #equation 1
-            if (S>co){
-              capital_omega_ij<-(min(N1,N2)-co)/min(N1,N2) #equation 3
-            } else if (S<co){
-              if ((N1+N2-N)<0){
-                capital_omega_ij<-co/min(N1,N2) #equation 4
+            if (S > co){
+              capital_omega_ij <- (min(N1,N2)-co)/min(N1,N2) #equation 3
+            } else if (S < co){
+              if ((N1+N2-N) <0 ){
+                capital_omega_ij <- co / min(N1,N2) #equation 4
               } else {
-                capital_omega_ij <- (co-(N1+N2-N))/min(N1,N2) #equation 5
+                capital_omega_ij <- (co-(N1+N2-N)) / min(N1,N2) #equation 5
               }
             } else {
-              capital_omega_ij<-1
+              capital_omega_ij <- 1
             }
-            N_ij <- lowercase_omega_ij/capital_omega_ij #equation 6
+            N_ij <- lowercase_omega_ij / capital_omega_ij #equation 6
           }
-          CO<-c(CO,N_ij)
+          CO <- c(CO,N_ij)
         }
       }
     }
