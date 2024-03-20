@@ -1,15 +1,13 @@
 citHeader("To cite nos in publications use:")
 
-citEntry(entry = "Article",
-   title = "NOS: A software suite to compute node overlap  and segregation
-            in ecological networks",
-   author = personList(as.person("Giovanni Strona"), as.person("Thomas J. Matthews"),
-                       as.person("Susanne Kortsch"), as.person("Joseph A. Veech")),
-   journal = "Ecography",
-   year = "2017",
-   volume = "In review",
-
-   textVersion =
-     paste("Strona, G., Matthews, T.J., Kortsch, S. and Veech, J.A. (2017) NOS: A
-    software suite to compute node overlap  and segregation in ecological
-           networks. Ecography. In review."))
+bibentry(,
+  bibtype      = "Article",
+  author       = "Giovanni Strona, Thomas J. Matthews, Susanne Kortsch, Joseph A. Veech",
+  title        = "NOS: A software suite to compute node overlap and segregation in ecological networks",
+  journal      = "Ecography",
+  year         = "2018",
+  volume       = "41",
+  pages        = "558-566",
+  issn         = "0098-3004",
+  doi          = "10.1111/ecog.03447",
+  url          = "https://nsojournals.onlinelibrary.wiley.com/doi/full/10.1111/ecog.03447")
